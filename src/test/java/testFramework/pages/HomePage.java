@@ -7,14 +7,19 @@ public class HomePage {
 
     private WebDriver webDriver;
 
-    private By homeLink = By.className("mdc-button_label");
+    private By HomeLink = By.xpath("//button//span[contains(text(),'Book Cart')]");
+    private By LoginLink = By.xpath("//span[contains(text(),'Login')]");
 
     public HomePage(WebDriver webDriver) {
         this.webDriver = webDriver;
     }
 
-    public void clickHomeLink() {
-        webDriver.findElement(this.homeLink).click();
+    public void clickHomeLink(){
+        webDriver.findElement(this.HomeLink).click();
+    }
+
+    public void clickLoginLink() {
+        webDriver.findElement(this.LoginLink).click();
     }
 
 }
